@@ -3,7 +3,7 @@
 # Text blips
 
 init python:
-  def blipSnooze(event, **kwargs):
+  def blipParents(event, **kwargs):
     if event == "show" and _preferences.text_cps != 0:
       renpy.sound.play("sound/blip.ogg", channel="music", loop=True)
     elif event == "slow_done" or event == "end":
@@ -18,7 +18,7 @@ define hr = Character("Honor Roll", color="#9C020E")
 define ss = Character("Short Stack", color="#B6853F")
 define ll = Character("Loose Leaf", color="#677538")
 define an = Character("All Nighter", color="#452F91")
-define pt = Character("Parentals", callback=blipSnooze)
+define pt = Character("Parentals", callback=blipParents)
 
 # The game starts here.
 
