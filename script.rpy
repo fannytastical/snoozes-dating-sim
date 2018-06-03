@@ -1,5 +1,14 @@
 ﻿# The script of the game goes in this file.
 
+# Text blips
+
+init python:
+  def blipSnooze(event, **kwargs):
+    if event == "show" and _preferences.text_cps != 0:
+      renpy.sound.play("sound/blip.ogg", channel="music", loop=True)
+    elif event == "slow_done" or event == "end":
+      renpy.sound.stop(channel="music")
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -10,7 +19,7 @@ define hr = Character("Honor Roll", color="#9C020E")
 define ss = Character("Short Stack", color="#B6853F")
 define ll = Character("Loose Leaf", color="#677538")
 define an = Character("All Nighter", color="#452F91")
-define pt = Character("Parentals")
+define pt = Character("Parentals", callback=blipSnooze)
 
 # The game starts here.
 
@@ -36,7 +45,7 @@ label start:
 
     hr "fuck you."
 
-    ss "that was uncalled for..."
+    ss "that \nwas uncalled for..."
 
     ll "god i love you short stack"
 
