@@ -3,8 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-define jd = Character("John Doe", color="#DEDEDC")
+define dad = Character("Dime a Dozen", color="#DEDEDC")
 define sb = Character("Snooze Button", color="#073A7C")
 define hr = Character("Honor Roll", color="#9C020E")
 define ss = Character("Short Stack", color="#B6853F")
@@ -16,51 +15,35 @@ define pt = Character("Parentals")
 
 label start:
 
-    scene ttb
+    scene dr
 
-    pt "Diimmeee!! It's time to get up!"
+    play sound "alarm clock.mp3" fadein 1.0 loop
 
-    "Errughhhh... What time is it?"
+    "I hear the alarm clock blaring."
 
-    pt "Dime! Come on, today's your orientation!!"
+    "I start to get up, it wasn’t going to stop anytime soon, so might as well get started on today."
 
-    "Oh Celestia, that's today?"
+    play sound "switch.mp3"
 
-    pt "DIME I SWEAR TO FUCKING CHRIST YOU GET YOUR ASS UP NOW."
+    "As I turn off the alarm, I get started on my usual morning routine: brush hair, teeth, the works."
 
-    "o shit dont wanna get my ass beat" 
+    "Everything was going fine until I looked into the mirror."
 
-    jd "hello!"
+    scene medicore
 
-    sb "hey!"
+    "There I was, just me."
 
-    hr "fuck you."
+    "This was a {i}supposedly{/i} a big day for me, the first day of the rest of my life."
 
-    ss "that was uncalled for..."
+    "My parents were excited, sure, but me? I didn’t feel anything. Not joy, nervousness, excitement... not even fear."
 
-    ll "god i love you short stack"
+    "Just...Nothing."
 
-    an "whoa whoa calm your panties."
+    "Why did my parents even name me Dime a Dozen? It's as if they knew that one day, I'd be questioning everything about myself, even my own name is plain!"
 
+    "Would going to this school really change anything?"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    pt "Diimmeee!! It's time to go!"
 
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
 
     return
